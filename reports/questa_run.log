@@ -1,0 +1,128 @@
+# puts "PROJECT_ROOT: $project_root"
+# PROJECT_ROOT: D:/DoAn/TKIC/axi_spi
+# 
+# set sources [list rtl/sync_fifo.sv rtl/spi_master.sv rtl/axi_spi_core.sv \
+#     rtl/de2_demo.sv tb/tb_axi_spi.sv tb/tb_de2_demo.sv tb/tb_boundaries.sv]
+# rtl/sync_fifo.sv rtl/spi_master.sv rtl/axi_spi_core.sv rtl/de2_demo.sv tb/tb_axi_spi.sv tb/tb_de2_demo.sv tb/tb_boundaries.sv
+# foreach source_file $sources {
+#     if {![file exists $source_file]} {error "Missing source: $source_file"}
+# }
+# if {![file exists tb/vectors.hex]} {error "Missing tb/vectors.hex; run Python scripts/generate_vectors.py first"}
+# 
+# file mkdir build
+# set library_path [file join $project_root build work]
+# D:/DoAn/TKIC/axi_spi/build/work
+# if {![file exists $library_path]} {vlib $library_path}
+# vmap axi_spi_work $library_path
+# QuestaSim-64 vmap 10.7c Lib Mapping Utility 2018.08 Aug 18 2018
+# vmap axi_spi_work D:/DoAn/TKIC/axi_spi/build/work 
+# Modifying D:/DoAn/TKIC/axi_spi/axi4.mpf
+# puts "STEP: compile RTL and testbenches"
+# STEP: compile RTL and testbenches
+# vlog -sv -work axi_spi_work {*}$sources
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 13:51:42 on Oct 06,2026
+# vlog -reportprogress 300 -sv -work axi_spi_work rtl/sync_fifo.sv rtl/spi_master.sv rtl/axi_spi_core.sv rtl/de2_demo.sv tb/tb_axi_spi.sv tb/tb_de2_demo.sv tb/tb_boundaries.sv 
+# -- Compiling module sync_fifo
+# -- Compiling module spi_master
+# -- Compiling module axi_spi_core
+# -- Compiling module de2_demo
+# -- Compiling module tb_axi_spi
+# -- Compiling module tb_de2_demo
+# -- Compiling module tb_boundaries
+# 
+# Top level modules:
+# 	tb_axi_spi
+# 	tb_de2_demo
+# 	tb_boundaries
+# End time: 13:51:42 on Oct 06,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# Explicit search library for submodules during elaboration.
+# puts "STEP: load axi_spi_work.tb_axi_spi"
+# STEP: load axi_spi_work.tb_axi_spi
+# vsim -L axi_spi_work -voptargs=+acc axi_spi_work.tb_axi_spi
+# vsim -L axi_spi_work -voptargs="+acc" axi_spi_work.tb_axi_spi 
+# Start time: 13:51:42 on Oct 06,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "spi_master(fast)".
+# Loading sv_std.std
+# Loading work.tb_axi_spi(fast)
+# Loading work.axi_spi_core(fast)
+# Loading work.sync_fifo(fast)
+# Loading work.spi_master(fast)
+# puts "DESIGN LOADED: tb_axi_spi"
+# DESIGN LOADED: tb_axi_spi
+# onfinish stop
+# 
+# add wave -divider AXI
+# add wave sim:/tb_axi_spi/clk sim:/tb_axi_spi/resetn
+# add wave sim:/tb_axi_spi/awvalid sim:/tb_axi_spi/awready sim:/tb_axi_spi/awaddr
+# add wave sim:/tb_axi_spi/wvalid sim:/tb_axi_spi/wready sim:/tb_axi_spi/wdata
+# add wave sim:/tb_axi_spi/bvalid sim:/tb_axi_spi/bready sim:/tb_axi_spi/bresp
+# add wave sim:/tb_axi_spi/arvalid sim:/tb_axi_spi/arready sim:/tb_axi_spi/araddr
+# add wave sim:/tb_axi_spi/rvalid sim:/tb_axi_spi/rready sim:/tb_axi_spi/rdata
+# add wave -divider SPI
+# add wave sim:/tb_axi_spi/sclk sim:/tb_axi_spi/mosi sim:/tb_axi_spi/miso sim:/tb_axi_spi/cs_n
+# add wave sim:/tb_axi_spi/mode sim:/tb_axi_spi/expected_tx sim:/tb_axi_spi/slave_byte
+# add wave sim:/tb_axi_spi/dut/tx_count sim:/tb_axi_spi/dut/rx_count
+# run -all
+# PASS: 3082 AXI checks; 1016 SPI bytes; modes 0/1/2/3; FIFO, strobes, errors, reset, stalled B/R
+# ** Note: $finish    : tb/tb_axi_spi.sv(135)
+#    Time: 2138360 ns  Iteration: 1  Instance: /tb_axi_spi
+# Break in Module tb_axi_spi at tb/tb_axi_spi.sv line 135
+# wave zoom full
+# 0 ps
+# 2245278 ns
+# puts "Transcript saved: reports/questa_run.log"
+# Transcript saved: reports/questa_run.log
+add wave -position insertpoint  \
+sim:/tb_axi_spi/test_passed \
+sim:/tb_axi_spi/clk \
+sim:/tb_axi_spi/resetn \
+sim:/tb_axi_spi/awaddr \
+sim:/tb_axi_spi/araddr \
+sim:/tb_axi_spi/awvalid \
+sim:/tb_axi_spi/wvalid \
+sim:/tb_axi_spi/bready \
+sim:/tb_axi_spi/arvalid \
+sim:/tb_axi_spi/rready \
+sim:/tb_axi_spi/wdata \
+sim:/tb_axi_spi/wstrb \
+sim:/tb_axi_spi/awready \
+sim:/tb_axi_spi/wready \
+sim:/tb_axi_spi/bvalid \
+sim:/tb_axi_spi/arready \
+sim:/tb_axi_spi/rvalid \
+sim:/tb_axi_spi/bresp \
+sim:/tb_axi_spi/rresp \
+sim:/tb_axi_spi/rdata \
+sim:/tb_axi_spi/sclk \
+sim:/tb_axi_spi/mosi \
+sim:/tb_axi_spi/cs_n \
+sim:/tb_axi_spi/busy \
+sim:/tb_axi_spi/miso \
+sim:/tb_axi_spi/checks \
+sim:/tb_axi_spi/bytes \
+sim:/tb_axi_spi/mode \
+sim:/tb_axi_spi/samples \
+sim:/tb_axi_spi/edge_count \
+sim:/tb_axi_spi/cycles \
+sim:/tb_axi_spi/launch_cycle \
+sim:/tb_axi_spi/slave_byte \
+sim:/tb_axi_spi/expected_tx \
+sim:/tb_axi_spi/observed_tx \
+sim:/tb_axi_spi/monitor_enabled \
+sim:/tb_axi_spi/value \
+sim:/tb_axi_spi/vectors \
+sim:/tb_axi_spi/i \
+sim:/tb_axi_spi/j
+run -all
+# ** Fatal: Global timeout
+#    Time: 10 ms  Scope: tb_axi_spi File: tb/tb_axi_spi.sv Line: 137
+# ** Note: $finish    : tb/tb_axi_spi.sv(137)
+#    Time: 10 ms  Iteration: 0  Instance: /tb_axi_spi
+# Break in Module tb_axi_spi at tb/tb_axi_spi.sv line 137
+quit -sim
+# End time: 13:52:41 on Oct 06,2026, Elapsed time: 0:00:59
+# Errors: 1, Warnings: 0

@@ -1,0 +1,10 @@
+Icarus Verilog 11.0 / Python 3 — 2026-10-06
+PASS: 3082 AXI checks; 1016 SPI bytes; modes 0/1/2/3; FIFO, strobes, errors, reset, stalled B/R
+PASS: DE2 wrapper 16 mode/pattern loopbacks, mismatch LED, reset
+PASS: depth-3 FIFO order/wrap/full/empty/simultaneous, divider 65535 full byte
+REGRESSION PASS (3 testbenches)
+
+Fault injection (temporary RTL only; not shipped as DUT): invert MISO sampling.
+FATAL: RX mode=0 got=0000005a expected=a5
+Simulator exit code: 1 (expected)
+This confirms the RX scoreboard detects an actual RTL fault.

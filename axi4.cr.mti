@@ -1,0 +1,50 @@
+D:/DoAn/TKIC/axi_spi/tb/tb_de2_demo.sv {1 {vlog -work work -vopt -sv -stats=none D:/DoAn/TKIC/axi_spi/tb/tb_de2_demo.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module tb_de2_demo
+
+Top level modules:
+	tb_de2_demo
+
+} {} {}} D:/DoAn/TKIC/axi_spi/rtl/sync_fifo.sv {1 {vlog -work work -vopt -sv -stats=none D:/DoAn/TKIC/axi_spi/rtl/sync_fifo.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module sync_fifo
+
+Top level modules:
+	sync_fifo
+
+} {} {}} D:/DoAn/TKIC/axi_spi/tb/tb_boundaries.sv {1 {vlog -work work -vopt -sv -stats=none D:/DoAn/TKIC/axi_spi/tb/tb_boundaries.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module tb_boundaries
+
+Top level modules:
+	tb_boundaries
+
+} {} {}} D:/DoAn/TKIC/axi_spi/rtl/axi_spi_core.sv {1 {vlog -work work -vopt -sv -stats=none D:/DoAn/TKIC/axi_spi/rtl/axi_spi_core.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module axi_spi_core
+
+Top level modules:
+	axi_spi_core
+
+} {} {}} D:/DoAn/TKIC/axi_spi/tb/tb_axi_spi.sv {1 {vlog -work work -vopt -sv -stats=none D:/DoAn/TKIC/axi_spi/tb/tb_axi_spi.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module tb_axi_spi
+
+Top level modules:
+	tb_axi_spi
+
+} {} {}} D:/DoAn/TKIC/axi_spi/rtl/spi_master.sv {1 {vlog -work work -vopt -sv -stats=none D:/DoAn/TKIC/axi_spi/rtl/spi_master.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module spi_master
+
+Top level modules:
+	spi_master
+
+} {} {}} D:/DoAn/TKIC/axi_spi/rtl/de2_demo.sv {1 {vlog -work work -vopt -sv -stats=none D:/DoAn/TKIC/axi_spi/rtl/de2_demo.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module de2_demo
+
+Top level modules:
+	de2_demo
+
+} {} {}}
