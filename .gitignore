@@ -21,3 +21,5 @@ vsim.wlf
 
 # Python
 __pycache__/
+*.cr.mti
+*.mpf
